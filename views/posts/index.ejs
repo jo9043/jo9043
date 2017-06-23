@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ./partials/head %>
+</head>
+
+<body>
+    <% include ../partials/nav %>
+
+        <!-- Page Header -->
+        <!-- Set your background image for this header on the line below. -->
+        <% include ./partials/header %>
+            <div class="container post post-index">
+
+                <!-- Post Content -->
+                <div class="container">
+                    <table class="table table-striped posts">
+                        <thead>
+                            <tr>
+                                <th class="title">Title</th>
+                                <th class="date">Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% if(posts == null || posts.length == 0){ %>
+                                <tr>
+                                    <td class="noData" colspan=100> There is no data to show :( </td>
+                                </tr>
+                                <% } %>
+                                    <% posts.forEach(function(post) { %>
+                                        <tr>
+                                            <td class="title">
+                                                <a href="/posts/<%= post._id %>">
+                                                    <div>
+                                                        <%= post.title %>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="date">
+                                                <%= post.createdDate %>
+                                            </td>
+                                        </tr>
+                                        <% }) %>
+                        </tbody>
+                    </table>
+                     <div class="buttons">
+                        <span style="float:right"><a class="btn btn-default" href="/posts/new">New</a></span>
+                    </div>
+                </div>
+
+
+                <hr>
+
+                <!-- Footer -->
+                <footer>
+                    <% include ../partials/link %>
+                </footer>
+
+                <!-- jQuery -->
+                <script src="../vendor/jquery/jquery.min.js"></script>
+
+                <!-- Bootstrap Core JavaScript -->
+                <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+                <!-- Theme JavaScript -->
+                <script src="../js/clean-blog.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ./partials/head %>
+
+</head>
+
+<body>
+    <% include ../partials/nav %>
+
+        <% include ./partials/header %>
+            <div class="container post post-show">
+                <div class="container">
+                    <div class="contentBox">
+                        <h3 class="contentBoxTop">
+                            <%= post.title %>
+                        </h3>
+                        <div class="row">
+                            <div class="col-sm-4 col-sm-push-8">
+                                <div class="post-info">
+                                    <div><span>Created</span> :
+                                        <%= post.createdDate %>
+                                            <%= post.createdTime %>
+                                    </div>
+                                    <% if(post.updatedAt) { %>
+                                        <div><span>Updated</span> :
+                                            <%= post.updatedDate %>
+                                                <%= post.updatedTime %>
+                                        </div>
+                                        <% } %>
+                                </div>
+                                <!-- post-info end -->
+                            </div>
+                            <!-- col end-->
+                            <div class="col-sm-8 col-sm-pull-4">
+                                <div class="post-body">
+                                    <%= post.body %>
+                                </div>
+                            </div>
+                            
+                            <!-- col end-->
+                          
+                        </div>
+                        <!-- row end -->
+                    </div>
+                    <div class="buttons">
+                        <span style="float:right"><a class="btn btn-default" href="/posts">Back</a></span>
+                        <!-- <span style="float:right"><a class="btn btn-default" href="/posts/<%= post._id %>/edit">Edit</a></span>
+                        <form action="/posts/<%= post._id %>?_method=delete" method="post">
+                            <span style="float:right"><a class="btn btn-default" href="#" onclick="confirm('Do you want to delete this?')?this.parentElement.submit():null;">Delete</a></span>
+                        </form>
+                        -->
+                    </div>
+
+                    <!-- post-container end -->
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Footer -->
+            <footer>
+                <% include ../partials/link %>
+            </footer>
+
+            <!-- jQuery -->
+            <script src="../vendor/jquery/jquery.min.js"></script>
+
+            <!-- Bootstrap Core JavaScript -->
+            <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+            <!-- Theme JavaScript -->
+            <script src="../js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
