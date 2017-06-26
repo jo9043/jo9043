@@ -3,6 +3,14 @@
 
 <head>
     <% include partials/head %>
+    
+    <script>
+    function doDisplay(obj){
+        // var con = document.getElementById('myDIV');
+        if (obj.style.display == 'none') obj.style.display = 'block';
+        else if (obj.style.display == 'block') obj.style.display = 'none';
+    }
+    </script>
 </head>
 
 <body>
@@ -25,41 +33,9 @@
         </header>
 
         <!-- Main Content -->
-
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="post-preview">
-                            <h2 class="post-title">
-                                FileDown
-                            </h2>
-                        </a>
-                        <p>Because of insufficient DataBase capacity, uploads files in git repository</p>
-                        <p>Please go to the below link</p>
-                        Link: <a href="https://github.com/jo9043">Git Repository</a>
-                        <p class="post-meta">June 20 2017</p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="post-preview">
-                            <h2 class="post-title">
-                                Welcome
-                            </h2>
-                        </a>
-                        <p>Open!
-                        <p class="post-meta">June 2 2017</p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
+        <% include contents/content1 %>
+        <% include contents/content2 %>       
+        <% include contents/content3 %>       
 
         <hr>
 
