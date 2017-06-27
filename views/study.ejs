@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include partials/head %>
+    
+    <script>
+    function doDisplay(obj){
+        // var con = document.getElementById('myDIV');
+        if (obj.style.display == 'none') obj.style.display = 'block';
+        else if (obj.style.display == 'block') obj.style.display = 'none';
+    }
+    </script>
+</head>
+
+<body>
+    <% include partials/nav %>
+
+        <!-- Page Header -->
+        <!-- Set your background image for this header on the line below. -->
+        <header class="intro-header" style="background-image: url('img/study-bg.jpg')">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <div class="site-heading">
+                            <h1>Study</h1>
+                            <hr class="small">
+                            <span class="subheading">2017 Summer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+                       
+        
+               
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <% include partials/link %>
+        </footer>
+
+        <!-- jQuery -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+        <!-- Theme JavaScript -->
+        <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
